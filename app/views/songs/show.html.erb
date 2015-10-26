@@ -1,0 +1,21 @@
+<a href="/songs">All Songs</a> | <a href="/logout">Log Out</a>
+
+<p>Others who added <%= @song.title %> by <%= @song.artist %></p>
+
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Times Added</th>
+	</thead>
+	<tbody>
+
+		<% @adds.each do |a| %>
+		
+		 <tr>
+			<td><a href="/users/<%=a.user_id%>"><%= a.user.name %></a></td>
+			<td><%= @adds.where(user:User.find(a.user_id)).count %></td>
+		</tr>
+		
+		<% end %>
+	</tbody>
+</table>
