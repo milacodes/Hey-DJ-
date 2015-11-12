@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-	root to: 'sessions#index'
+  root 'sessions#index'
  
   get '/main' => 'sessions#index'
 

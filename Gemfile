@@ -6,14 +6,18 @@ gem 'rails', '4.1.8'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 4.0.3'
+# gem 'sass-rails', '~> 4.0.3'
+
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-rails', '~> 4.0.0'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer',  platforms: :ruby
-gem 'foundation-rails'
+
+
+gem 'sass-rails', '~> 5.0.3'
+gem 'foundation-rails', '~> 5.5.0.0'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -42,3 +46,5 @@ gem 'spring',        group: :development
 gem 'hirb'
 
 gem 'bcrypt', '~> 3.1.7'
+
+
