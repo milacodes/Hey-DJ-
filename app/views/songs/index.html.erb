@@ -1,46 +1,108 @@
-<h2>Welcome <%= @user.name %>!</h2>  <a href="/logout">Log Out</a>
+<div class = "row">
+	<div class = "small-12 medium-8 columns">
+		<h2 class = "section_title">Welcome <%= @user.name %>!</h2>
+	</div>
+	<div class = "small-12 medium-4 columns">
+		<a class = "button right" href="/logout">Log Out</a>
+	</div>
+</div>
+<br>
 
-<h3>All Songs in our Hub</h3>
+<div class = "row">
+	<div class = "small-12 medium-8 columns">
+		<div class= "row">
+			<h3 class = "section_title">All Songs in our Hub</h3>
+		</div>
+		
+		<div class = "row">
+			<table>
+				<thead>
+					<tr>
+						<th>Artist</th>
+						<th>Title</th>
+						<th>Times Added</th>
+						<th>Add to Playlist</th>
+					</tr>
+				</thead>
+				<tbody>
+					<% @songs.each do |s| %>
+					<tr>
+						<td><%= s.artist %></td>
+						<td><a href="/songs/<%= s.id %>"><%= s.title %></a></td>
+						<td> <%= @adds.where(song:Song.find(s.id)).count %> </td>
+						<td>
+							<form action = "/adds" method = "post">
+								<input type = "hidden" name = "authenticity_token" value = "<%= form_authenticity_token %>">
+								<input type = "hidden" name = "add[user_id]" value = "<%= @user.id %>">
+								<input type = "hidden" name = "add[song_id]" value = "<%= s.id %>">
+								<input type = "submit" value = "ADD!">
+							</form>
+						</td>
+					</tr>
+					<% end %>
+				</tbody>
+			</table>
+		</div>
+	</div>
 
-<table>
-	<thead>
-		<th>Artist</th>
-		<th>Title</th>
-		<th>Times Added</th>
-		<th>Add to Playlist</th>
-	</thead>
-	<tbody>
-		<% @songs.each do |s| %>
-		<tr>
-			<td><%= s.artist %></td>
-			<td><a href="/songs/<%= s.id %>"><%= s.title %></a></td>
-			<td> <%= @adds.where(song:Song.find(s.id)).count %> </td>
-			<td>
-				<form action = "/adds" method = "post">
-					<input type = "hidden" name = "authenticity_token" value = "<%= form_authenticity_token %>">
-					<input type = "hidden" name = "add[user_id]" value = "<%= @user.id %>">
-					<input type = "hidden" name = "add[song_id]" value = "<%= s.id %>">
-					<input type = "submit" value = "ADD!">
-				</form>
-			</td>
-		</tr>
+	<div class = "small-12 medium-4 columns">	
+		<div class= "row">
+			<h3 class = "section_title">Add a Song to the hub</h3>
+		</div>
+		
+		<div class = "row">
+			<form action = "/songs" method = "post">
+				<input type = "hidden" name = "authenticity_token" value = "<%= form_authenticity_token %>">
+				<input type = "hidden" name = "song[user_id]" value = "<%= @user.id %>">
+		
+				<div class="row">
+				    <div class="small-12 columns">
+				    	<label>Artist
+				       		<input type="text" name = "song[artist]"/>
+				    	</label>
+				    </div>
+				</div>
+		
+				<div class="row">
+				    <div class="small-12 columns">
+				    	<label>Title
+				       		<input type="text" name = "song[title]"/>
+				    	</label>
+				    </div>
+				</div>
+				<button class = "right" type = "submit">Add Song</button>
+		
+				<!-- Artist:<input type = "text" name = "song[artist]">
+				Title:<input type = "text" name = "song[title]">
+				<input type = "submit" value = "Add Song"> -->
+			</form>
+		</div>
+	</div>
+</div>
+
+<div class = "row">
+	<div class = "small-12 columns">
+		<% if flash[:errors] %>
+			<p class = "red"> <%= flash[:errors] %> </p>
 		<% end %>
-	</tbody>
-</table>
+	</div>
+</div>
 
-<h3>Add a Song to the hub</h3>
 
-<form action = "/songs" method = "post">
-	<input type = "hidden" name = "authenticity_token" value = "<%= form_authenticity_token %>">
-	<p> Artist:<input type = "text" name = "song[artist]"></p>
-	<p> Title:<input type = "text" name = "song[title]"></p>
-	<input type = "hidden" name = "song[user_id]" value = "<%= @user.id %>">
-	<input type = "submit" value = "Add Song">
-</form>
 
-<% if flash[:errors] %>
-	<p> <%= flash[:errors] %> </p>
-<% end %>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

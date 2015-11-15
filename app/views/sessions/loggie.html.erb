@@ -1,0 +1,47 @@
+<div class= "row">
+	<h3 class = "section_title">Log In Below</h3>
+	<br>
+</div>
+
+<div class = "row">
+		
+	
+	<div class = "logform small-12 columns">
+		<form action = "/login" method = "post">
+			<input type = "hidden" name = "authenticity_token" value = "<%= form_authenticity_token %>">
+		
+			<div class="row">
+		    	<div class="small-12 columns">
+		      		<label>Email
+		       			<input type="email" name = "email" placeholder = "email here"/>
+		    		</label>
+		    	</div>
+		  	</div>
+		
+		  	<div class="row">
+		    	<div class="small-12 columns">
+		      		<label>Password
+		       			<input type="password" name = "password" placeholder = "password here"/>
+		    		</label>
+		    	</div>
+		  	</div>
+		
+		  	<div class = "row">
+		  		<div class = "small-12 columns">
+					<button type = "submit" value = "Log In">Log In</button>
+				</div>
+			</div>
+		</form>
+		<!-- <button class = ""><a href="/"></a>Go Back</button> -->
+		<a class = "button left" href="/">Go Back</a>
+	</div>
+	
+	<div class = "row">
+		<div class = "small-12 columns">
+			<% if flash[:errors] %>
+				<p class = "red"> <%= flash[:errors] %> </p>
+			<% end %>
+		</div>
+	</div>
+</div>
+

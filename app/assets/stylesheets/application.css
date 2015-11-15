@@ -13,7 +13,52 @@
  *= require_tree .
  *= require foundation_and_overrides
  *= require_self
- *= require foundation_and_overrides
 
  */
+body{
+	
+  	background-color: #66b2ff;
+}
+
+.login, .register{
+	/*outline: 1px solid orchid;*/
+	height: 125px;
+	margin: 5px;
+}
+
+.welcome{
+	height: 300px;
+	/*outline: 1px solid green;*/
+	border-bottom: 1px solid black;
+}
+	/*.welcome h2{
+		text-shadow: 1px 1px 3px whitesmoke;
+	}*/
+
+.footer, .logo{
+	background-color: slategray;
+	color: whitesmoke;
+	padding: 0px 10px 0px 10px;
+}
+
+.section_title{
+	text-shadow: 1px 1px 3px whitesmoke;
+}
+
+.red{
+	color: red;
+	text-shadow: 1px 1px 2px black;
+
+}
+
+
+
+
+
+
+
+
+
+
+
 

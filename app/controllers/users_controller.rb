@@ -6,7 +6,7 @@ class UsersController < ApplicationController
 
 		if  user.errors.full_messages.any?
 			flash[:errors] = user.errors.full_messages
-			redirect_to "/main"
+			redirect_to "/reg"
 
 		else
 			session[:user_id] = user.id

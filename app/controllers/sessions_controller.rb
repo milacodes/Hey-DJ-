@@ -1,6 +1,14 @@
 class SessionsController < ApplicationController
 	def index
-		render "main"
+		render "splash"
+	end
+
+	def log
+		render "loggie"
+	end
+
+	def reg
+		render "reggie"
 	end
 
 	def create
@@ -13,8 +21,8 @@ class SessionsController < ApplicationController
 			flash[:success] = "Welcome to your page!"
 			redirect_to "/songs"
 		else
-			flash[:errors] = "Something's wroooong...."
-			redirect_to "/main"
+			flash[:errors] = "Email and/or Password don't match. Please try again."
+			redirect_to "/log"
 		end
 	end
 

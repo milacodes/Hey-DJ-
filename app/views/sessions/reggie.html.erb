@@ -1,0 +1,58 @@
+<div class= "row">
+	<h3 class = "section_title">Register Below</h3>
+	<br>
+</div>
+
+<div class = "row">
+	<form action = "/register" method = "post">
+		<input type = "hidden" name = "authenticity_token" value = "<%= form_authenticity_token %>">
+
+		<div class="row">
+		    <div class="small-12 columns">
+		    	<label>Name
+		       		<input type="text" name = "user[name]" placeholder = "name here"/>
+		    	</label>
+		    </div>
+		</div>
+		<div class="row">
+		    <div class="small-12 columns">
+		    	<label>Email
+		       		<input type="email" name = "user[email]" placeholder = "email here"/>
+		    	</label>
+		    </div>
+		</div>
+		<div class="row">
+		    <div class="small-12 columns">
+		    	<label>Password
+		       		<input type="password" name = "user[password]" placeholder = "password here"/>
+		    	</label>
+		    </div>
+		</div>
+		<div class="row">
+		    <div class="small-12 columns">
+		    	<label>Password Confirmation
+		       		<input type="password" name = "password_confirmation" placeholder = "confirm password"/>
+		    	</label>
+		    </div>
+		</div>
+
+	<!-- 	Name: <input type = "text" name = "user[name]" placeholder = "name here">
+		Email: <input type = "email" name = "user[email]" placeholder = "email here">
+		Password: <input type = "password" name = "user[password]" placeholder = "password here">
+		Password confirmation: <input type = "password" name = "password_confirmation" placeholder = "confirm password"> -->
+		<!-- <input type = "submit" value = "Sign Up"> -->
+		<button type = "submit" value = "Sign Up">Sign Up</button>
+		<!-- <button><a href="/"></a>Go Back</button> -->
+	</form>
+	<a class = "button left" href="/">Go Back</a>
+
+	<div class = "row">
+		<div class = "small-12 columns red">
+			<% if flash[:errors] %>
+				<p class = "red"> <%= flash[:errors] %> </p>
+			<% end %>
+		</div>
+	</div>
+
+</div>
+
