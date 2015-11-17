@@ -255,8 +255,8 @@ $include-html-global-classes: $include-html-classes;
 // We use these to style anchors
 // $anchor-text-decoration: none;
 // $anchor-text-decoration-hover: none;
-// $anchor-font-color: $primary-color;
-// $anchor-font-color-hover: scale-color($primary-color, $lightness: -14%);
+$anchor-font-color: #0066CC;
+$anchor-font-color-hover: #003399;
 
 // We use these to style the <hr> element
 // $hr-border-width: 1px;
@@ -447,8 +447,8 @@ $include-html-global-classes: $include-html-classes;
 // We use these to control button border and hover styles.
 // $button-border-width: 0px;
 // $button-border-style: solid;
-// $button-bg-color: $primary-color;
-// $button-bg-hover: scale-color($button-bg-color, $lightness: $button-function-factor);
+$button-bg-color: #0066CC;
+$button-bg-hover: #003399;
 // $button-border-color: $button-bg-hover;
 // $secondary-button-bg-hover: scale-color($secondary-color, $lightness: $button-function-factor);
 // $secondary-button-border-color: $secondary-button-bg-hover;
@@ -1271,12 +1271,12 @@ $include-html-global-classes: $include-html-classes;
 
 // These control the background color for the table and even rows
 // $table-bg: $white;
-// $table-even-row-bg: $snow;
+$table-even-row-bg: #E0E0E0;
 
 // These control the table cell border style
 // $table-border-style: solid;
-// $table-border-size: 1px;
-// $table-border-color: $gainsboro;
+$table-border-size: 3px;
+$table-border-color: slategray;
 
 // These control the table head styles
 // $table-head-bg: $white-smoke  ;

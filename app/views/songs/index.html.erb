@@ -2,21 +2,21 @@
 	<div class = "small-12 medium-8 columns">
 		<h2 class = "section_title">Welcome <%= @user.name %>!</h2>
 	</div>
-	<div class = "small-12 medium-4 columns">
-		<a class = "button right" href="/logout">Log Out</a>
+	<div class = "small-12 medium-3 columns">
+		<a class = "button small right" href="/logout">Log Out</a>
 	</div>
 </div>
 <br>
 
 
-<div class = "row">
+<div class = "row medium-uncollapse">
 	<div class = "small-12 medium-8 columns">
 		<div class= "row">
 			<h3 class = "section_title">All Songs in our Hub</h3>
 		</div>
 		
 		<div class = "row">
-			<table>
+			<table class = "hub">
 				<thead>
 					<tr>
 						<th>Artist</th>
@@ -36,7 +36,8 @@
 								<input type = "hidden" name = "authenticity_token" value = "<%= form_authenticity_token %>">
 								<input type = "hidden" name = "add[user_id]" value = "<%= @user.id %>">
 								<input type = "hidden" name = "add[song_id]" value = "<%= s.id %>">
-								<input type = "submit" value = "ADD!">
+								<button class = "tiny" type = "submit">ADD!</button>
+
 							</form>
 						</td>
 					</tr>
@@ -71,11 +72,7 @@
 				    	</label>
 				    </div>
 				</div>
-				<button class = "right" type = "submit">Add Song</button>
-		
-				<!-- Artist:<input type = "text" name = "song[artist]">
-				Title:<input type = "text" name = "song[title]">
-				<input type = "submit" value = "Add Song"> -->
+				<button class = "small right" type = "submit">Add Song</button>
 			</form>
 		</div>
 	</div>

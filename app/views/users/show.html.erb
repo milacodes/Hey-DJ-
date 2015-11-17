@@ -1,20 +1,36 @@
-<a href="/songs">All Songs</a> | <a href="/logout">Log Out</a>
+<div class = "row">
+	<div class = "small-12 columns">
+		<a class = "button small left" href="/songs">Back To All Songs</a>
+		<a class = "button small right" href="/logout">Log Out</a>
+	</div>
+</div>
 
-<h2><%= @user.name %>'s Playlist</h2>
-
-<table>
-	<thead>
-		<th>Artist</th>
-		<th>Title</th>
-		<th>Times Added</th>
-	</thead>
-	<tbody>
-		<% @adds.each do |a| %>
-		<tr>
-			<td><%= a.artist %></td>
-			<td><%= a.title %></td>
-			<td><%= @songs.where(user_id:@user.id, song_id:a.id).count %></td>
-		</tr>
-		<% end %>
-	</tbody>
-</table>
+<div class = "row text-center">
+	<div class = "row">
+		<div class = "small-12 columns">
+			<h2 class = "section_title"><%= @user.name %>'s Playlist</h2>
+		</div>
+	</div>	
+	<div class = "row">
+		<div class = "small-12 columns">
+			<table align = "center">
+				<thead>
+					<tr>
+						<th>Artist</th>
+						<th>Title</th>
+						<th>Times Added</th>
+					</tr>
+				</thead>
+				<tbody>
+					<% @adds.each do |a| %>
+					<tr>
+						<td><%= a.artist %></td>
+						<td><%= a.title %></td>
+						<td><%= @songs.where(user_id:@user.id, song_id:a.id).count %></td>
+					</tr>
+					<% end %>
+				</tbody>
+			</table>
+		</div>		
+	</div>
+</div>		
