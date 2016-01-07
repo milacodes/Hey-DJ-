@@ -17,16 +17,16 @@
  */
 body{
 	
-  	background-color: #66b2ff;
+  	/*background-color: #66b2ff;*/
   	/*background-color: rgba(102, 178, 255, .5);*/
-  	/*background-image: url(/assets/phones.jpg);*/
-  	/*background: url(phones.jpg); 
+  	background-image: image-url(phones.jpg);
+  	/*background: url(phones.jpg); */
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
   	background-size: cover;
-  	background-position: center;*/
-  	/*linear-gradient(rgba(102, 178, 255, .5),rgba(102, 178, 255, .5)), 
+  	background-position: center;
+  	/*linear-gradient(rgba(102, 178, 255, .5),rgba(102, 178, 255, .5)), */
   	margin-left: 15px;
   	margin-right: 15px;
 }
