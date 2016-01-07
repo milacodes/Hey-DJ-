@@ -30,6 +30,8 @@ body{
   	 
   	margin-left: 15px;
   	margin-right: 15px;
+
+  	color: rgb(43,51,54)
 }
 
 /****************** General ********************/
@@ -46,11 +48,22 @@ body{
 .title:hover{
 	color: #003399;
 }
+.botpad{
+	padding-bottom: 20%;
+}
+label{
+	color: rgb(43,51,54);
+}
+
+button{
+	color: rgb(43,51,54);
+	text-shadow: 1px 1px 2px whitesmoke;
+}
 /****************** Header/Footer ********************/
 
 header, footer{
 	/*background-color: slategray;*/
-	color: whitesmoke;
+	/*color: whitesmoke;*/
 	padding: 0px 10px 0px 10px;
 }
 
@@ -74,13 +87,9 @@ footer{
 
 .intro_para{
 	font-size: 1.4rem;
-	color: rgb(239,240,244);
+	/*color: rgb(239,240,244);*/
 }
 
-.intro_param{
-	font-size: 1.4rem;
-	color: white;
-}
 
 /*(239,240,244)*/
 /****************** Songs/Index ********************/
