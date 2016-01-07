@@ -69,7 +69,10 @@ button{
 .atext{
 	color: rgb(43,51,54);
 	text-shadow: 1px 1px 2px whitesmoke;
+}
 
+.content{
+	margin-bottom: 20%;
 }
 /****************** Header/Footer ********************/
 
