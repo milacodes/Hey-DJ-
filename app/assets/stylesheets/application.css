@@ -15,7 +15,7 @@
  *= require_self
 
  */
- 
+
 body{
 	
   	/*background-color: #66b2ff;*/
@@ -44,9 +44,14 @@ body{
 
 
 .footer, .logo{
-	background-color: slategray;
+	/*background-color: slategray;*/
 	color: whitesmoke;
 	padding: 0px 10px 0px 10px;
+}
+
+.footer{
+	position: absolute;
+	bottom: 0px;
 }
 
 .section_title{
