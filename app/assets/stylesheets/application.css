@@ -34,9 +34,15 @@ body{
   	color: rgb(43,51,54)
 }
 
+section{
+	min-height: 100%;
+	position: relative;
+}
+
 /****************** General ********************/
 
 .section_title{
+	color: #2B3336;
 	text-shadow: 1px 1px 3px whitesmoke;
 }
 
@@ -48,9 +54,9 @@ body{
 .title:hover{
 	color: #003399;
 }
-.botpad{
+/*.botpad{
 	padding-bottom: 20%;
-}
+}*/
 label{
 	color: rgb(43,51,54);
 }
@@ -58,6 +64,12 @@ label{
 button{
 	color: rgb(43,51,54);
 	text-shadow: 1px 1px 2px whitesmoke;
+}
+
+.atext{
+	color: rgb(43,51,54);
+	text-shadow: 1px 1px 2px whitesmoke;
+
 }
 /****************** Header/Footer ********************/
 
@@ -82,12 +94,10 @@ footer{
 
 .welcome{
 	padding-bottom: 15px;
-	/*border-bottom: 1px solid black;*/
 }
 
 .intro_para{
 	font-size: 1.4rem;
-	/*color: rgb(239,240,244);*/
 }
 
 
@@ -97,13 +107,6 @@ footer{
 .hub{
 	margin-right: 20px;
 }
-
-
-
-
-
-
-
 
 
 .red{

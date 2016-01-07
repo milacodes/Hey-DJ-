@@ -13,21 +13,27 @@
 </head>
 
 <body>
-    <div class = "row">
-        <header class = "small-12 columns">
-            <h1 class = "text-right">
-                <a class = "title" href="/">Hey DJ! Music Club</a>
-            </h1>
-        </header>
-    </div>
-    <br>
-    <%= yield %>
-    <br>
-    <div class = "row">
-        <footer class = "small-12 columns">
-                <p class = "text-left">Mila Wilkinson &copy; 2015</p>
-        </footer>
-    </div>
+    <section>
 
+        <div class = "row">
+            <header class = "small-12 columns">
+                <h1 class = "text-right">
+                    <a class = "title" href="/">Hey DJ! Music Club</a>
+                </h1>
+            </header>
+        </div>
+
+        <br>
+        <%= yield %>
+        <br>
+
+        <div class = "row">
+            <footer class = "small-12 columns">
+                    <p class = "text-left">Mila Wilkinson &copy; 2015</p>
+            </footer>
+        </div>
+        
+    </section>
 </body>
+
 </html>
