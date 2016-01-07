@@ -19,7 +19,7 @@ body{
 	
   	/*background-color: #66b2ff;*/
   	/*background-color: rgba(102, 178, 255, .5);*/
-  	background-image: url(".//assets/images/phones.jpg");
+  	background-image: url(/assets/phones.jpg);
   	/*linear-gradient(rgba(102, 178, 255, .5),rgba(102, 178, 255, .5)), */
   	background-size: cover;
   	background-position: center;
