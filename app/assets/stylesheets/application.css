@@ -32,40 +32,10 @@ body{
   	margin-right: 15px;
 }
 
-.login, .register{
-	height: 125px;
-	margin: 5px;
-}
-
-.welcome{
-	padding-bottom: 15px;
-	border-bottom: 1px solid black;
-}
-
-
-.footer, .logo{
-	/*background-color: slategray;*/
-	color: whitesmoke;
-	padding: 0px 10px 0px 10px;
-}
-
-.footer{
-	position: absolute;
-	bottom: 0px;
-}
+/****************** General ********************/
 
 .section_title{
 	text-shadow: 1px 1px 3px whitesmoke;
-}
-
-.red{
-	color: red;
-	text-shadow: 1px 1px 2px black;
-
-}
-
-.hub{
-	margin-right: 20px;
 }
 
 .title{
@@ -75,6 +45,62 @@ body{
 
 .title:hover{
 	color: #003399;
+}
+/****************** Header/Footer ********************/
+
+header, footer{
+	/*background-color: slategray;*/
+	color: whitesmoke;
+	padding: 0px 10px 0px 10px;
+}
+
+footer{
+	position: absolute;
+	bottom: 0px;
+	font-size: .75rem;
+}
+
+/****************** Splash ********************/
+
+.login, .register{
+	height: 125px;
+	margin: 5px;
+}
+
+.welcome{
+	padding-bottom: 15px;
+	/*border-bottom: 1px solid black;*/
+}
+
+.intro_para{
+	font-size: 1.4rem;
+	color: rgb(239,240,244);
+}
+
+.intro_param{
+	font-size: 1.4rem;
+	color: white;
+}
+
+/*(239,240,244)*/
+/****************** Songs/Index ********************/
+
+.hub{
+	margin-right: 20px;
+}
+
+
+
+
+
+
+
+
+
+.red{
+	color: red;
+	text-shadow: 1px 1px 2px black;
+
 }
 
 img{
