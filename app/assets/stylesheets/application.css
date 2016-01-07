@@ -72,17 +72,22 @@ button{
 }
 
 .content{
-	margin-bottom: 20%;
+	margin-bottom: 15%;
 }
 /****************** Header/Footer ********************/
 
-header, footer{
-	/*background-color: slategray;*/
-	/*color: whitesmoke;*/
+/*header, footer{
+	background-color: slategray;
+	color: whitesmoke;
 	padding: 0px 10px 0px 10px;
+}
+*/
+header{
+	margin-bottom: 2%;
 }
 
 footer{
+	margin-bottom: 0px;
 	position: absolute;
 	bottom: 0px;
 	font-size: .75rem;
